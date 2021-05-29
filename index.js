@@ -14,26 +14,28 @@ const colors = [
   buttonsEl[1].addEventListener('click', stopColorsChange)
 
   // const intervalId = setInterval(addBodyRandomColor, DELAY)
+  // clearInterval(intervalId)
+
+  // function addBodyRandomColor() {
+  //   const randomIntegerFromInterval = (min, max) => {
+  //     return Math.floor(Math.random() * (max - min + 1) + min);
+  //   }
+
+  //   if(startColorsChange) {
+  //     document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)]}
+  // }
 
   function startColorsChange() {
-    if(intervalId.isActive = true) {
-      buttonsEl[0].setAttribute('disabled', true)
-    }
-    else {buttonsEl[0].setAttribute('disabled', false)}
+    buttonsEl[0].setAttribute('disabled', true)
   }
 
   function stopColorsChange() {
-    if (startColorsChange) {
-      clearInterval(setInterval(addBodyRandomColor, DELAY))
-    }
+    buttonsEl[0].setAttribute('disabled', false)
+    // if (startColorsChange) {
+    //   clearInterval(intervalId)
+    // }
   }
 
-  function addBodyRandomColor() {
-    const randomIntegerFromInterval = (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    if(startColorsChange) {
-      document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)]}
-  }
+
 
   
