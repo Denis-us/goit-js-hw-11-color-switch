@@ -6,14 +6,34 @@ const colors = [
     '#009688',
     '#795548',
   ];
-
-  const bodyEl = document.querySelector('body')
+  
   const buttonsEl = document.querySelectorAll('button')
-  // console.log(buttonsEl[0].dataset.action)
-  // console.log(buttonsEl[1].dataset.action)
+  const DELAY = 1000
 
-  // console.log(buttonsEl)
+  buttonsEl[0].addEventListener('click', startColorsChange)
+  buttonsEl[1].addEventListener('click', stopColorsChange)
 
-  const randomIntegerFromInterval = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
+  // const intervalId = setInterval(addBodyRandomColor, DELAY)
+
+  function startColorsChange() {
+    if(intervalId.isActive = true) {
+      buttonsEl[0].setAttribute('disabled', true)
+    }
+    else {buttonsEl[0].setAttribute('disabled', false)}
+  }
+
+  function stopColorsChange() {
+    if (startColorsChange) {
+      clearInterval(setInterval(addBodyRandomColor, DELAY))
+    }
+  }
+
+  function addBodyRandomColor() {
+    const randomIntegerFromInterval = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    if(startColorsChange) {
+      document.body.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)]}
+  }
+
+  
