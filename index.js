@@ -34,6 +34,8 @@ function startColorsChange() {
   startBtn.disabled = 'true'
 }
 
+console.log(intervalId)
+
 function stopColorsChange() {
   clearInterval(intervalId)
 
